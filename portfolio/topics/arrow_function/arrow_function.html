@@ -7,12 +7,15 @@
 </head>
 <body>
     <h1>Arrow Function</h1>
-    <p id="greeting"></p>
+    <button onclick="greet()">Greet</button>
+    <p id="greetOutput"></p>
     <script>
-        const groet = naam => `Hallo, ${naam}!`;
-        const greeting = groet('Alice');
-        document.getElementById('greeting').textContent = greeting;
-        alert(greeting);
+        const greet = () => {
+            const name = prompt("Voer je naam in:");
+            const message = `Hallo, ${name}! Welkom terug.`;
+            alert(message);
+            document.getElementById('greetOutput').textContent = message;
+        };
     </script>
 </body>
 </html>

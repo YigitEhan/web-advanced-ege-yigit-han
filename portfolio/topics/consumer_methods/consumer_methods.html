@@ -7,17 +7,29 @@
 </head>
 <body>
     <h1>Consumer Methods</h1>
+    <button onclick="inputNumbers()">Voer Cijfers In</button>
     <ul id="numberList"></ul>
     <script>
-        const numbers = [1, 2, 3, 4, 5];
-        const doubled = numbers.map(num => num * 2);
         const numberList = document.getElementById('numberList');
-        doubled.forEach(num => {
-            const li = document.createElement('li');
-            li.textContent = num;
-            numberList.appendChild(li);
-        });
-        alert(doubled.join(', '));
+
+        const inputNumbers = () => {
+            const input = prompt("Voer  cijfers in, gescheiden door komma's:");
+            if (input) {
+                const numbers = input.split(',').map(num => parseInt(num.trim()));
+                const doubled = numbers.map(num => num * 2);
+                displayNumbers(doubled);
+            }
+        };
+
+        const displayNumbers = (numbers) => {
+            numberList.innerHTML = ''; // Leeg de lijst voordat nieuwe nummers worden toegevoegd
+            numbers.forEach(num => {
+                const li = document.createElement('li');
+                li.textContent = num;
+                numberList.appendChild(li);
+            });
+            alert(numbers.join(', '));
+        };
     </script>
 </body>
 </html>

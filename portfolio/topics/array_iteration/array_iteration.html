@@ -3,20 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Array Iteration</title>
+    <title>Iteratie over een array</title>
 </head>
 <body>
-    <h1>Array Iteration</h1>
-    <ul id="namesList"></ul>
+    <h1>Iteratie over een array</h1>
+    <button onclick="wijzigNamen()">Wijzig Namen</button>
+    <p id="namesList"></p>
     <script>
-        const namen = ['Alice', 'Bob', 'Charlie'];
-        const namesList = document.getElementById('namesList');
-        namen.forEach(naam => {
-            const li = document.createElement('li');
-            li.textContent = naam;
-            namesList.appendChild(li);
-        });
-        alert(namen.join(', '));
+        let personen = [
+            { naam: 'Jan', leeftijd: 30 },
+            { naam: 'Piet', leeftijd: 25 },
+            { naam: 'Klaas', leeftijd: 40 }
+        ];
+
+        function wijzigNamen() {
+            const gewijzigdeNamen = [];
+            personen.forEach((persoon, index) => {
+                const nieuweNaam = prompt(`Voer de nieuwe naam in voor ${persoon.naam}:`);
+                personen[index].naam = nieuweNaam;
+                gewijzigdeNamen.push(nieuweNaam);
+            });
+
+            toonNamen();
+            toonNotificatie(gewijzigdeNamen);
+        }
+
+        function toonNamen() {
+            const namenP = document.getElementById('namesList');
+            namenP.textContent = ''; // Wis de inhoud van de paragraaf
+
+            personen.forEach(persoon => {
+                const naamSpan = document.createElement('span');
+                naamSpan.textContent = persoon.naam;
+                namenP.appendChild(naamSpan);
+                namenP.appendChild(document.createElement('br')); // Voeg een line-break toe na elke naam
+            });
+        }
+
+        function toonNotificatie(gewijzigdeNamen) {
+            alert(`De gewijzigde namen zijn: ${gewijzigdeNamen.join(', ')}`);
+        }
     </script>
 </body>
 </html>

@@ -7,12 +7,16 @@
 </head>
 <body>
     <h1>Template Literals</h1>
+    <input type="text" id="nameInput" placeholder="Voer je naam in" required>
+    <button onclick="toonBegroeting()">Toon Begroeting</button>
     <p id="greeting"></p>
     <script>
-        const naam = 'John';
-        const begroeting = `Hallo, ${naam}! Welkom bij mijn portfolio.`;
-        document.getElementById('greeting').textContent = begroeting;
-        alert(begroeting);
+        function toonBegroeting() {
+            const naam = document.getElementById('nameInput').value;
+            const begroeting = `Hallo, ${naam}! Welkom bij mijn portfolio.`;
+            document.getElementById('greeting').textContent = begroeting;
+            alert(begroeting);
+        }
     </script>
 </body>
 </html>

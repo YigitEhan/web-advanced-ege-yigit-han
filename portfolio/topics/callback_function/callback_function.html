@@ -7,15 +7,22 @@
 </head>
 <body>
     <h1>Callback Function</h1>
-    <p id="callbackMessage"></p>
+    <button onclick="performOperation(5, 3, add)">Add (5 + 3)</button>
+    <button onclick="performOperation(5, 3, subtract)">Subtract (5 - 3)</button>
+    <button onclick="performOperation(5, 3, multiply)">Multiply (5 * 3)</button>
+    <button onclick="performOperation(5, 3, divide)">Divide (5 / 3)</button>
+    <p id="resultOutput"></p>
     <script>
-        function doeIets(callback) {
-            callback('Dit is een callback.');
-        }
-        doeIets(boodschap => {
-            document.getElementById('callbackMessage').textContent = boodschap;
-            alert(boodschap);
-        });
+        const add = (a, b) => a + b;
+        const subtract = (a, b) => a - b;
+        const multiply = (a, b) => a * b;
+        const divide = (a, b) => a / b;
+
+        const performOperation = (num1, num2, callback) => {
+            const result = callback(num1, num2);
+            alert(`Result of operation: ${result}`);
+            document.getElementById('resultOutput').textContent = `Result: ${result}`;
+        };
     </script>
 </body>
 </html>

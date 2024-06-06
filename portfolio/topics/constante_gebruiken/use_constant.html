@@ -7,11 +7,17 @@
 </head>
 <body>
     <h1>Constante Gebruiken</h1>
+    <input type="number" id="numberInput" placeholder="Voer een nummer in" required>
+    <button onclick="toonConstante()">Toon Constante</button>
     <p id="constantValue"></p>
     <script>
-        const PI = 3.14;
-        document.getElementById('constantValue').textContent = 'De waarde van PI is: ' + PI;
-        alert('De waarde van PI is: ' + PI);
+        function toonConstante() {
+            const nummer = document.getElementById('numberInput').value;
+            const PI = 3.14;
+            const resultaat = `De waarde van PI is: ${PI} en je hebt ${nummer} ingevoerd.`;
+            document.getElementById('constantValue').textContent = resultaat;
+            alert(resultaat);
+        }
     </script>
 </body>
 </html>

@@ -7,19 +7,27 @@
 </head>
 <body>
     <h1>Promise</h1>
-    <p id="promiseResult"></p>
+    <button onclick="startPromise()">Start Promise</button>
+    <p id="promiseOutput"></p>
     <script>
-        function mijnPromise() {
+        const promiseFunction = () => {
             return new Promise((resolve, reject) => {
                 setTimeout(() => {
-                    resolve('Promise opgelost!');
-                }, 2000);
+                    resolve("Promise is voltooid!");
+                }, 2000); // Simuleer een vertraging van 2 seconden
             });
-        }
-        mijnPromise().then(resultaat => {
-            document.getElementById('promiseResult').textContent = resultaat;
-            alert(resultaat);
-        });
+        };
+
+        const startPromise = () => {
+            promiseFunction()
+                .then(result => {
+                    document.getElementById('promiseOutput').textContent = result;
+                    alert(result); // Alert na het voltooien van de promise
+                })
+                .catch(error => {
+                    console.error(error);
+                });
+        };
     </script>
 </body>
 </html>
