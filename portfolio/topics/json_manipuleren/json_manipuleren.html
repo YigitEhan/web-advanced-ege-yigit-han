@@ -7,10 +7,12 @@
 </head>
 <body>
     <h1>JSON Manipuleren</h1>
+    <p id="jsonData"></p>
     <script>
-        const jsonString = '{"naam":"John","leeftijd":30}';
+        const jsonString = '{"name": "John", "age": 30}';
         const jsonObject = JSON.parse(jsonString);
-        alert(`Naam: ${jsonObject.naam}, Leeftijd: ${jsonObject.leeftijd}`);
+        document.getElementById('jsonData').textContent = `Naam: ${jsonObject.name}, Leeftijd: ${jsonObject.age}`;
+        alert(`Naam: ${jsonObject.name}, Leeftijd: ${jsonObject.age}`);
     </script>
 </body>
 </html>

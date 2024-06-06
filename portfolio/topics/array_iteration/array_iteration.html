@@ -7,9 +7,16 @@
 </head>
 <body>
     <h1>Array Iteration</h1>
+    <ul id="namesList"></ul>
     <script>
         const namen = ['Alice', 'Bob', 'Charlie'];
-        namen.forEach(naam => alert(naam));
+        const namesList = document.getElementById('namesList');
+        namen.forEach(naam => {
+            const li = document.createElement('li');
+            li.textContent = naam;
+            namesList.appendChild(li);
+        });
+        alert(namen.join(', '));
     </script>
 </body>
 </html>

@@ -7,9 +7,11 @@
 </head>
 <body>
     <h1>Destructuring</h1>
+    <p id="personInfo"></p>
     <script>
         const persoon = { voornaam: 'Jane', achternaam: 'Doe' };
         const { voornaam, achternaam } = persoon;
+        document.getElementById('personInfo').textContent = `Voornaam: ${voornaam}, Achternaam: ${achternaam}`;
         alert(`Voornaam: ${voornaam}, Achternaam: ${achternaam}`);
     </script>
 </body>

@@ -7,17 +7,22 @@
 </head>
 <body>
     <h1>Spread & Rest Operator</h1>
+    <p id="spreadResult"></p>
+    <p id="restResult"></p>
     <script>
         // Spread operator
         const cijfers = [1, 2, 3];
         const meerCijfers = [...cijfers, 4, 5, 6];
-        alert('Spread operator: ' + meerCijfers);
+        document.getElementById('spreadResult').textContent = 'Spread operator: ' + meerCijfers;
 
         // Rest operator
         function optellen(...getallen) {
             return getallen.reduce((a, b) => a + b, 0);
         }
         const resultaat = optellen(1, 2, 3, 4, 5);
+        document.getElementById('restResult').textContent = 'Rest operator: ' + resultaat;
+
+        alert('Spread operator: ' + meerCijfers);
         alert('Rest operator: ' + resultaat);
     </script>
 </body>

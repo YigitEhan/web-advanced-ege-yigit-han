@@ -7,11 +7,15 @@
 </head>
 <body>
     <h1>Callback Function</h1>
+    <p id="callbackMessage"></p>
     <script>
         function doeIets(callback) {
             callback('Dit is een callback.');
         }
-        doeIets(boodschap => alert(boodschap));
+        doeIets(boodschap => {
+            document.getElementById('callbackMessage').textContent = boodschap;
+            alert(boodschap);
+        });
     </script>
 </body>
 </html>

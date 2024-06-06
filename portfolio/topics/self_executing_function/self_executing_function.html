@@ -7,9 +7,12 @@
 </head>
 <body>
     <h1>Self Executing Function</h1>
+    <p id="iifeResult"></p>
     <script>
         (function() {
-            alert('Dit is een self executing function.');
+            const message = 'Deze functie voert zichzelf uit!';
+            document.getElementById('iifeResult').textContent = message;
+            alert(message);
         })();
     </script>
 </body>

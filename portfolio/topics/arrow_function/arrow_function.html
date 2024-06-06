@@ -7,9 +7,12 @@
 </head>
 <body>
     <h1>Arrow Function</h1>
+    <p id="greeting"></p>
     <script>
         const groet = naam => `Hallo, ${naam}!`;
-        alert(groet('Alice'));
+        const greeting = groet('Alice');
+        document.getElementById('greeting').textContent = greeting;
+        alert(greeting);
     </script>
 </body>
 </html>

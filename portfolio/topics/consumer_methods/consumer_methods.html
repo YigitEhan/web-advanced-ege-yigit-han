@@ -7,11 +7,17 @@
 </head>
 <body>
     <h1>Consumer Methods</h1>
+    <ul id="numberList"></ul>
     <script>
-        const cijfers = [1, 2, 3, 4, 5];
-        const nieuweCijfers = cijfers.map(cijfer => cijfer * 2);
-        alert('Oude cijfers: ' + cijfers);
-        alert('Nieuwe cijfers: ' + nieuweCijfers);
+        const numbers = [1, 2, 3, 4, 5];
+        const doubled = numbers.map(num => num * 2);
+        const numberList = document.getElementById('numberList');
+        doubled.forEach(num => {
+            const li = document.createElement('li');
+            li.textContent = num;
+            numberList.appendChild(li);
+        });
+        alert(doubled.join(', '));
     </script>
 </body>
 </html>

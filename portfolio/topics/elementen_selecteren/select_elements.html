@@ -7,12 +7,13 @@
 </head>
 <body>
     <h1>Elementen Selecteren</h1>
-    <p id="paragraph">Dit is een paragraaf.</p>
-    <button onclick="selectElement()">Selecteer Paragraaf</button>
+    <p id="demo">Dit is een paragraaf.</p>
+    <button onclick="selectElement()">Selecteer Element</button>
     <script>
         function selectElement() {
-            const para = document.getElementById('paragraph');
-            alert(para.textContent);
+            const element = document.getElementById('demo');
+            element.style.color = 'red';
+            alert('Element geselecteerd en kleur veranderd!');
         }
     </script>
 </body>
