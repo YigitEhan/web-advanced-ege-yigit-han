@@ -8,10 +8,8 @@
 <body>
     <h1>Spread & Rest Operator</h1>
 
-    <p>
-         Voer nummers in, gescheiden door komma's en geen spaties
-    </p>
-    <input type="text" id="numbersInput" placeholder= "Voer nummers in, gescheiden door komma's" required>
+    <p>Voer nummers in, gescheiden door komma's en geen spaties</p>
+    <input type="text" id="numbersInput" placeholder="Voer nummers in, gescheiden door komma's" required>
     <button onclick="toonSpreadRest()">Toon Resultaten</button>
     <p id="spreadResult"></p>
     <p id="restResult"></p>
@@ -20,7 +18,7 @@
             const numbers = document.getElementById('numbersInput').value.split(',').map(Number);
 
             // Spread operator
-            const meerCijfers = [...numbers, 4, 5, 6];
+            const meerCijfers = [...numbers];
             document.getElementById('spreadResult').textContent = 'Spread operator: ' + meerCijfers;
 
             // Rest operator

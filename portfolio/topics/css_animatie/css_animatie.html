@@ -3,24 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CSS Animatie</title>
+    <title>Basis CSS Animatie</title>
     <style>
-        @keyframes kleurVeranderen {
-            0% { background-color: red; }
-            100% { background-color: blue; }
-        }
-        .animatie {
+        .animated {
             width: 100px;
             height: 100px;
-            animation: kleurVeranderen 2s infinite alternate;
+            background-color: red;
+            animation-name: rotateAnimation;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
+        }
+
+        @keyframes rotateAnimation {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
         }
     </style>
 </head>
 <body>
-    <h1>CSS Animatie</h1>
-    <div class="animatie"></div>
-    <script>
-        alert('CSS animatie toegepast op het vierkant.');
-    </script>
+    <h1>Basis CSS Animatie</h1>
+    <div class="animated"></div>
 </body>
 </html>
