@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulier Valideren</title>
+</head>
+<body>
+    <h1>Formulier Valideren</h1>
+    <form id="myForm">
+        <input type="text" id="username" placeholder="Gebruikersnaam" required>
+        <button type="submit">Verzenden</button>
+    </form>
+    <p id="errorMessage" style="color: red;"></p>
+    <script>
+        document.getElementById('myForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const username = document.getElementById('username').value;
+            if (username === '') {
+                document.getElementById('errorMessage').textContent = 'Gebruikersnaam is verplicht!';
+            } else {
+                document.getElementById('errorMessage').textContent = '';
+                alert('Formulier succesvol verzonden!');
+            }
+        });
+    </script>
+</body>
+</html>

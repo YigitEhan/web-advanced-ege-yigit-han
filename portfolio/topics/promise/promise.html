@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+<body>
+    <h1>Promise</h1>
+    <script>
+        const mijnPromise = new Promise((resolve, reject) => {
+            const succes = true;
+            if (succes) {
+                resolve('De operatie is geslaagd.');
+            } else {
+                reject('De operatie is mislukt.');
+            }
+        });
+
+        mijnPromise
+            .then(boodschap => alert(boodschap))
+            .catch(boodschap => alert(boodschap));
+    </script>
+</body>
+</html>

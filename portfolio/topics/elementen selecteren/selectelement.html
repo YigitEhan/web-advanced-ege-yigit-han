@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementen Selecteren</title>
+</head>
+<body>
+    <h1>Elementen Selecteren</h1>
+    <p id="paragraph">Dit is een paragraaf.</p>
+    <button onclick="selectElement()">Selecteer Paragraaf</button>
+    <script>
+        function selectElement() {
+            const para = document.getElementById('paragraph');
+            alert(para.textContent);
+        }
+    </script>
+</body>
+</html>

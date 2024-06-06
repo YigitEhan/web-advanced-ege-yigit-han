@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementen Manipuleren</title>
+</head>
+<body>
+    <h1>Elementen Manipuleren</h1>
+    <p id="paragraph">Dit is een paragraaf.</p>
+    <button onclick="manipulateElement()">Verander Tekst</button>
+    <script>
+        function manipulateElement() {
+            const para = document.getElementById('paragraph');
+            para.textContent = 'De tekst is veranderd!';
+        }
+    </script>
+</body>
+</html>

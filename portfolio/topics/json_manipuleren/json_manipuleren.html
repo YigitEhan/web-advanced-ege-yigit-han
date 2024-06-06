@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON Manipuleren</title>
+</head>
+<body>
+    <h1>JSON Manipuleren</h1>
+    <script>
+        const jsonString = '{"naam":"John","leeftijd":30}';
+        const jsonObject = JSON.parse(jsonString);
+        alert(`Naam: ${jsonObject.naam}, Leeftijd: ${jsonObject.leeftijd}`);
+    </script>
+</body>
+</html>

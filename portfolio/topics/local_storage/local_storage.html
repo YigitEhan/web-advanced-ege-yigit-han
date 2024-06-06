@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+</head>
+<body>
+    <h1>Local Storage</h1>
+    <form id="nameForm">
+        <input type="text" id="nameInput" placeholder="Voer je naam in" required>
+        <button type="submit">Opslaan</button>
+    </form>
+    <p id="storedName"></p>
+    <script>
+        document.getElementById('nameForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const name = document.getElementById('nameInput').value;
+            localStorage.setItem('name', name);
+            displayStoredName();
+        });
+
+        function displayStoredName() {
+            const storedName = localStorage.getItem('name');
+            if (storedName) {
+                document.getElementById('storedName').textContent = `Opgeslagen naam: ${storedName}`;
+            } else {
+                document.getElementById('storedName').textContent = 'Geen naam opgeslagen.';
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', displayStoredName);
+    </script>
+</body>
+</html>
