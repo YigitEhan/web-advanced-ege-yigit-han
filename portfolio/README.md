@@ -5,16 +5,16 @@ Dit portfolio bevat voorbeelden van verschillende webontwikkelingstechnieken en 
 ## Inhoud
 
 1. **Elementen Selecteren** (`select_elements.html`)
-   - Laat zien hoe je elementen selecteert met JavaScript.
+   -Dit gedeelte laat zien hoe je HTML-elementen kunt selecteren met behulp van JavaScript en hoe je ze kunt manipuleren.
 
 2. **Elementen Manipuleren** (`manipulate_elements.html`)
-   - Laat zien hoe je elementen manipuleert met JavaScript.
+   - Hier wordt gedemonstreerd hoe je de eigenschappen van HTML-elementen kunt veranderen met behulp van JavaScript.
 
 3. **Event aan een element koppelen** (`attach_event.html`)
-   - Laat zien hoe je een event aan een element koppelt.
+   - Dit laat zien hoe je JavaScript-events aan HTML-elementen kunt koppelen en hoe je deze events kunt afhandelen.
 
 4. **Formulier Valideren** (`validate_form.html`)
-   - Laat zien hoe je een formulier valideert met JavaScript.
+   - Hier wordt getoond hoe je formulierinvoer kunt valideren met JavaScript, bijvoorbeeld het controleren van invoervelden vóór verzending.
 
 5. **Gebruiken van een constante** (`use_constant.html`)
    - Laat zien hoe je een constante gebruikt in JavaScript.

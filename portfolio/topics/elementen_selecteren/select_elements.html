@@ -4,17 +4,53 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elementen Selecteren</title>
+    <style>
+        .selected {
+            color: red; 
+        }
+    </style>
 </head>
 <body>
-    <h1>Elementen Selecteren</h1>
-    <p id="demo">Dit is een paragraaf.</p>
-    <button onclick="selectElement()">Selecteer Element</button>
+    <h1>Kies een Element (click op een van de 3 elementen)</h1>
+    <p id="paragraph1">Paragraaf 1</p>
+    <p id="paragraph2">Paragraaf 2</p>
+    <h2 id="heading">Hoofdtitel</h2>
+
     <script>
-        function selectElement() {
-            const element = document.getElementById('demo');
-            element.style.color = 'red';
-            alert('Element geselecteerd en kleur veranderd!');
-        }
+       
+        const paragraph1 = document.getElementById('paragraph1');
+        const paragraph2 = document.getElementById('paragraph2');
+        const heading = document.getElementById('heading');
+
+        
+        paragraph1.addEventListener('click', function() {
+            
+            paragraph1.classList.remove('selected');
+            paragraph2.classList.remove('selected');
+            heading.classList.remove('selected');
+
+            
+            this.classList.add('selected');
+
+            
+            alert('Je hebt Paragraaf 1 geselecteerd!');
+        });
+
+        paragraph2.addEventListener('click', function() {
+            paragraph1.classList.remove('selected');
+            paragraph2.classList.remove('selected');
+            heading.classList.remove('selected');
+            this.classList.add('selected');
+            alert('Je hebt Paragraaf 2 geselecteerd!');
+        });
+
+        heading.addEventListener('click', function() {
+            paragraph1.classList.remove('selected');
+            paragraph2.classList.remove('selected');
+            heading.classList.remove('selected');
+            this.classList.add('selected');
+            alert('Je hebt de Hoofdtitel geselecteerd!');
+        });
     </script>
 </body>
 </html>

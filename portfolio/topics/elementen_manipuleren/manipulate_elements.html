@@ -7,13 +7,22 @@
 </head>
 <body>
     <h1>Elementen Manipuleren</h1>
-    <div id="content">Originele tekst</div>
-    <button onclick="manipuleerElement()">Manipuleer Element</button>
+    <p id="paragraph1">Paragraaf 1: Dit is de eerste voorbeeldparagraaf.</p>
+    <button onclick="veranderStijl('paragraph1')">Verander Stijl Paragraaf 1</button>
+    <p id="paragraph2">Paragraaf 2: Dit is de tweede voorbeeldparagraaf.</p>
+    <button onclick="veranderStijl('paragraph2')">Verander Stijl Paragraaf 2</button>
+
     <script>
-        function manipuleerElement() {
-            const element = document.getElementById('content');
-            element.textContent = 'Tekst veranderd!';
-            alert('Element gemanipuleerd!');
+        function veranderStijl(paragraafId) {
+            
+            const paragraph = document.getElementById(paragraafId);
+
+            
+            alert('De stijl van het paragraafelement wordt nu gewijzigd.');
+
+            
+            paragraph.style.color = 'green';
+            paragraph.style.fontFamily = 'Arial';
         }
     </script>
 </body>

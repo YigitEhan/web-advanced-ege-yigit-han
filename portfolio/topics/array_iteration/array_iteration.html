@@ -30,13 +30,13 @@
 
         function toonNamen() {
             const namenP = document.getElementById('namesList');
-            namenP.textContent = ''; // Wis de inhoud van de paragraaf
+            namenP.textContent = '';
 
             personen.forEach(persoon => {
                 const naamSpan = document.createElement('span');
                 naamSpan.textContent = persoon.naam;
                 namenP.appendChild(naamSpan);
-                namenP.appendChild(document.createElement('br')); // Voeg een line-break toe na elke naam
+                namenP.appendChild(document.createElement('br'));
             });
         }
 

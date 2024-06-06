@@ -14,7 +14,7 @@
             return new Promise((resolve, reject) => {
                 setTimeout(() => {
                     resolve("Promise is voltooid!");
-                }, 2000); // Simuleer een vertraging van 2 seconden
+                }, 2000); 
             });
         };
 
@@ -22,7 +22,7 @@
             promiseFunction()
                 .then(result => {
                     document.getElementById('promiseOutput').textContent = result;
-                    alert(result); // Alert na het voltooien van de promise
+                    alert(result); 
                 })
                 .catch(error => {
                     console.error(error);

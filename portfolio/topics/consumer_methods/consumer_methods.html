@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>Consumer Methods</h1>
-    <button onclick="inputNumbers()">Voer Cijfers In</button>
+    <button onclick="inputNumbers()">Voer Cijfers In da je wilt verdubbelen</button>
     <ul id="numberList"></ul>
     <script>
         const numberList = document.getElementById('numberList');
@@ -22,7 +22,7 @@
         };
 
         const displayNumbers = (numbers) => {
-            numberList.innerHTML = ''; // Leeg de lijst voordat nieuwe nummers worden toegevoegd
+            numberList.innerHTML = '';
             numbers.forEach(num => {
                 const li = document.createElement('li');
                 li.textContent = num;

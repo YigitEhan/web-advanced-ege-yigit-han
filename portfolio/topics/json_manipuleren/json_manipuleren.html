@@ -6,12 +6,17 @@
     <title>JSON Manipuleren</title>
 </head>
 <body>
+    
     <h1>JSON Manipuleren</h1>
+
+    <P>
+        Verander gewoon naam en jaar
+    </P>
     <textarea id="jsonInput" onclick="restorePlaceholder()" placeholder='{"name": "John", "age": 30}' required></textarea>
     <button onclick="toonJSON()">Toon JSON</button>
     <p id="jsonData"></p>
     <script>
-        // Functie om de JSON-gegevens weer te geven
+        
         function toonJSON() {
             const jsonString = document.getElementById('jsonInput').value;
             const jsonObject = JSON.parse(jsonString);
@@ -19,7 +24,7 @@
             alert(`Naam: ${jsonObject.name}, Leeftijd: ${jsonObject.age}`);
         }
 
-        // Functie om de placeholder-tekst te herstellen als de gebruiker de inhoud van de textarea leegmaakt
+        
         function restorePlaceholder() {
             const textarea = document.getElementById('jsonInput');
             if (textarea.value === '') {
@@ -27,7 +32,7 @@
             }
         }
 
-        // Op het moment dat de pagina laadt, wordt de placeholder-tekst hersteld
+        
         window.onload = restorePlaceholder;
     </script>
 </body>
